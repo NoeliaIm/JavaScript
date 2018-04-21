@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 13</title>
+	<meta name="description" content="Crear diversos errores en una página y comprobarlos mediante onError.">
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		body{
+			width: 100vw;
+			height: 100vh;
+		}
+		#mostrar{
+			width: 250px;
+			height: 150px;
+		}
+	</style>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function error() {
+			document.getElementById('mostrar').innerHTML="No se puede mostra la imagen, ha ocurrido un error.";
+		}
+	</script>
+	
+</head>
+<body>
+	<div id="mostrar">
+		<img src="imagen.png" alt="" onerror="error()">
+	</div>
+</body>
+</html>

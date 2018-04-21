@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ejercicio 16</title>
+		<meta name="decription" content="Crear un array de arrays que permita almacenar Nombres y 3 notas de alumnos.
+			a) Permitir añadir y eliminar alumnos y notas.
+			b) Añadir un nuevo elemento (Nota Media).
+			c) Mostrar el array ordenado por nombres o por nota media
+		">
+		<script type="text/javascript">
+			var nombre=[];												//Creo un array vacio
+		
+			function datosAlumno() {
+				a=document.getElementById('nombre').value;				//Recojo valores
+				b=document.getElementById('nota1').value;
+				c=document.getElementById('nota2').value;
+				d=document.getElementById('nota3').value;
+			
+				var nuevoArray = [a, b, c, d];							//Con esos valores, creo un array
+				nombre.push(nuevoArray);								//Y lo añado al array principal (donde le toque:push)
+
+				document.getElementById("zona").innerHTML = "";			//Limpio "ZONA"
+				for (i=0; i<nombre.length; i++) {						//Añado el nombre de cada registro a "ZONA"
+					document.getElementById("zona").innerHTML += nombre[i][0] + "<br />";
+				}
+			}
+
+			// Y NO TE LIES. VETE A LO FACIL +++++++++++++++++++++++++++++++++++++++++
+		</script>
+	</head>
+
+	<body>
+		<input type="text" id="nombre" name="nombre" value="" placeholder="Escribe el nombre">
+		<br>
+		<input type="text" id="nota1" name="nota1" value="" placeholder="Escribe la nota">
+		<br>
+		<input type="text" id="nota2" name="nota2" value="" placeholder="Escribe la nota">
+		<br>
+		<input type="text" id="nota3" name="nota3" value="" placeholder="Escribe la nota">
+		<br>
+		<input type="button" value="Enviar" onclick="datosAlumno()" />
+		<div id="zona"></div>
+	</body>
+</html>

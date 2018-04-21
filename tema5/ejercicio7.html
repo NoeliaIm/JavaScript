@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 7</title>
+	<meta name="description" content="Detectar la pulsación de los botones del ratón">
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		body{
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+	<script type="text/javascript">
+		function detectarBotones(e) {
+			if (e.button==0) {
+				document.getElementById('mostrar').innerHTML="Has pulsado el botón izquierdo";
+			}else if (e.button==1) {
+			document.getElementById('mostrar').innerHTML="Has pulsado el botón del centro";
+			}else if (e.button==2) {
+				document.getElementById('mostrar').innerHTML="Has pulsado el botón de la derecha";
+			}
+		}
+	</script>
+</head>
+<body onmousedown="detectarBotones(event)">
+	<div id="mostrar">
+		
+	</div>
+</body>
+</html>

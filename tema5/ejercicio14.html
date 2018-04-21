@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 14</title>
+	<meta name="decription" content="Mostrar un cuestionario en el que por cada pregunta exista un botón que muestre la respuesta.">
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		#cajaMostrar{
+			float: right;
+			height: 300px;
+		}
+		#mostrar{
+			margin: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		function respuesta(pregunta) {
+			switch (pregunta){
+				case 1: 
+				document.getElementById('mostrar').value="Arquímedes";
+				break;
+				case 2: 
+				document.getElementById('mostrar').value="Alemania";
+				break;
+				default:
+				document.getElementById('mostrar').value="";
+			}
+		}
+	</script>
+</head>
+<body>
+	
+		<p>1.¿A quién se le atribuye la famosa interjección: ¡Eureka!?</p><button onclick="respuesta(1)">Respuesta</button>
+		<p>2.¿De qué país es la empresa de golosinas llamada Haribo?</p><button onclick="respuesta(2)">Respuesta</button>
+
+
+	
+	<div id="cajaMostrar">
+		<input type="text" id="mostrar" name="mostrar" value="" placeholder="">
+	</div>
+</body>
+</html>

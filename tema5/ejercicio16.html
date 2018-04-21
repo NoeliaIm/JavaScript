@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 16</title>
+	<meta name="decription" content="Crear un array de arrays que permita almacenar Nombres y 3 notas de alumnos.
+      a) Permitir añadir y eliminar alumnos y notas.
+      b) Añadir un nuevo elemento (Nota Media).
+      c) Mostrar el array ordenado por nombres o por nota media
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var nombre=new Array();
+		for (var i = 0; i < 1; i++) {
+			nombre[i]=new Array(4);
+		}
+		function datosAlumno() {
+			
+			a=document.getElementById('nombre').value;
+			b=document.getElementById('nota1').value;
+			c=document.getElementById('nota2').value;
+			d=document.getElementById('nota3').value;
+			var posicionNombre=nombre.length-1;
+			var posicionNota1=posicionNombre+1;
+			var posicionNota2=posicionNota1+1;
+			var posicionNota3=posicionNota2+1;
+			nombre[posicionNombre][posicionNombre]=a;
+			nombre[posicionNombre][posicionNota1]=b;
+			nombre[posicionNombre][posicionNota2]=c;
+			nombre[posicionNombre][posicionNota3]=d;
+			/*if(nombre.length>=1){
+				var otro=new Array(3);
+				nombre.push(otro);
+			}*/
+			/*Esto lo hice para que me añadiera un resgistro vacío para que poder guardar la siguiente entrada, pero me salta posiciones y me deja elementos vacíos
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<input type="text" id="nombre" name="nombre" value="" placeholder="Escribe el nombre">
+	<br>
+	<input type="text" id="nota1" name="nota1" value="" placeholder="Escribe la nota">
+	<br>
+	<input type="text" id="nota2" name="nota2" value="" placeholder="Escribe la nota">
+	<br>
+	<input type="text" id="nota3" name="nota3" value="" placeholder="Escribe la nota">
+	<br>
+	<button onclick="datosAlumno()">Enviar</button>
+</body>
+</html>

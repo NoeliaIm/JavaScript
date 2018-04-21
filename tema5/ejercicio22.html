@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 22</title>
+	<meta name="description" content="Creación de clase PC con 3 propiedades (micro, velocidad, sistema) y 1 método (verOrdenador) que devuelva una cadena con las tres propiedades separadas por un ENTER.
+Se podrán crear infinitos elementos almacenándolos en un array.
+Mostrar todos los ordenadores en una tabla dentro de una nueva ventana.
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var Pc=[];
+		function PC(micro, velocidad,sistema){
+			this.micro=micro;
+			this.velocidad=velocidad;
+			this.sistema=sistema;
+		}
+		function grabarPc() {
+			micro=document.getElementById('campoMicro').value;
+			velocidad=document.getElementById('campoVelocidad').value;
+			sistema=document.getElementById('campoSistema').value;
+			Pc.push(new PC(micro, velocidad, sistema));
+			borraDatos();
+		}
+		function verOrdenador() {
+			hija= window.open("", "", "width=500,height=500");
+			for (var i = 0; i < Pc.length; i++) {
+				hija.document.write(Pc[i].micro+" "+Pc[i].velocidad+" "+Pc[i].sistema+"<br>");
+			}
+
+		}
+		function borraDatos() {
+			document.getElementById('campoMicro').value="";
+			document.getElementById('campoVelocidad').value="";
+			document.getElementById('campoSistema').value="";
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Equipos informáticos</legend>
+			<label>Micro:<input type="text" id="campoMicro" name="micro" value=""></label><br>
+			<label>Velocidad:<input type="text" id="campoVelocidad" name="velocidad" value=""></label><br>
+			<label>Sistema:<input type="text" id="campoSistema" name="sistema" value=""></label>
+		</fieldset>
+		<input type="button" id="borrarDatos" name="borrarDatos" value="Borrar Datos" onclick="borraDatos()">
+		<input type="button" id="crearPc" name="crearPc" value="Crear Pc" onclick="grabarPc()">
+		<input type="button" id="muestraListado" name="muestraListado" value="Muestra Listado" onclick="verOrdenador()">
+	</form>
+</body>
+</html>

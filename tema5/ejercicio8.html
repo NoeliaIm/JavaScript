@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 8</title>
+	<meta name="description" content="Validar durante la escritura un campo de texto. Solo se permitirán letras, impidiendo el uso de números y caracteres especiales">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var letras=["a","b","c", "d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+		//http://www.yoelprogramador.com/teclas-del-teclado-y-valores-de-codigos-de-tecla/
+		var especiales=[32,37,38,39,40,46];
+		function escritura(e) {
+			var teclaPulsada = e.keyCode || e.which;
+			var letra = String.fromCharCode(teclaPulsada);
+			console.log(letra);
+			if (letras.includes(letra)) {
+			document.getElementById('txt').innerHTML+=letra;
+			
+		}else if(especiales.includes(e.keyCode)){
+			document.getElementById('txt').innerHTML+=e.keyCode;
+			
+		}else{
+			return false;
+		}
+		}
+		function pegada() {
+			document.getElementById('txt').innerHTML="";
+		}
+		
+	</script>
+</head>
+<body>
+	<div class="texto">
+		<input type="text" id="txt" name="texto"  value="" placeholder="Escribe aquí" onkeypress="return escritura(event)">
+	</div>
+</body>
+</html>

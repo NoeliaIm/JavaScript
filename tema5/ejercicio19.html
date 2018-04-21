@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 19</title>
+	<meta name="description" content="Realizar una clase que permita almacenar:
+
+Empresa		
+CIF			xx.xxxx.xxxxx.xxxx.
+Ciclo alumno		DAW, DAM, ASR, PCPI, …
+
+Alumno			
+DNI			xx.xxx.xxx-x
+Ciclo			DAM, DAW, ASR, PCPI, …
+Año finalización Ciclo	2011
+
+Permitir Altas, Bajas, Búsquedas de alumnos por Ciclo y por Año de finalización.
+">
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		body{
+		width: 100vw;
+		height: 100vw;
+		}
+		.empresas{
+			width: 48vw;
+			float: left;
+			display: inline;
+		}
+		.alumnos{
+			width: 45vw;
+			display: inline;
+		}
+		#mostrar{
+			margin-top: 19px;
+		}
+	</style>
+	<script type="text/javascript">
+		var ArrayEmpresas=[];
+		var ArrayAlumnos=[];
+		function Empresa(nombreEmpresa, cif, cicloAlumno){
+			this.nombreEmpresa=nombreEmpresa;
+			this.cif=cif;
+			this.cicloAlumno=cicloAlumno;
+		}
+		function Alumno(nombreAlumno,DNI, Ciclo, anioFinCiclo){
+			this.nombreAlumno=nombreAlumno;
+			this.DNI=DNI;
+			this.Ciclo=Ciclo;
+			this.anioFinCiclo=anioFinCiclo;
+		}
+		function introEmpresa() {
+			nombreEmpresa=document.getElementById('nombreEmpresa').value;
+			cif=document.getElementById('cifEmpresa').value;
+			cicloAlumno=document.getElementById('cicloAlumno').value;
+			ArrayEmpresas.push(new Empresa(nombreEmpresa,cif,cicloAlumno));
+		}
+		
+		function borrarEmpresa() {
+			ciff=document.getElementById('cifEmpresa').value;
+			for (var i = 0; i < ArrayEmpresas.length; i++) {
+			if (ArrayEmpresas[i].cif==ciff) {
+				ArrayEmpresas.splice(i, 1);
+				break;
+			}	
+			
+			}
+			
+		}
+		function introAlumno() {
+			nombreAlumno=document.getElementById('nombreAlumno').value;
+			DNI=document.getElementById('DniAlumno').value;
+			Ciclo=document.getElementById('ciclo').value;
+			anioFinCiclo=document.getElementById('finCiclo').value;
+			ArrayAlumnos.push(new Alumno(nombreAlumno,DNI, Ciclo, anioFinCiclo));
+		}
+		function borrarAlumno() {
+			dnii=document.getElementById('DniAlumno').value;
+			for (var i = 0; i < ArrayAlumnos.length; i++) {
+			if (ArrayAlumnos[i].DNI==dnii) {
+				ArrayAlumnos.splice(i, 1);
+				break;
+			}	
+			
+			}
+			
+		}
+		function buscarXCiclo() {
+			cicloo=document.getElementById('ciclo').value;
+			document.getElementById('mostrar').innerHTML+="Alumnos del ciclo "+cicloo+
+			"<br>";
+			for (var i = 0; i < ArrayAlumnos.length; i++) {
+			if (ArrayAlumnos[i].Ciclo==cicloo) {
+				document.getElementById('mostrar').innerHTML+=ArrayAlumnos[i].nombreAlumno+"<br>";
+			}	
+			
+			}
+			
+		}
+		function buscarXFin() {
+			finn=document.getElementById('finCiclo').value;
+			document.getElementById('mostrar').innerHTML+="Alumnos que terminaron el año "+finn+
+			"<br>";
+			for (var i = 0; i < ArrayAlumnos.length; i++) {
+			if (ArrayAlumnos[i].anioFinCiclo==finn) {
+				document.getElementById('mostrar').innerHTML+=ArrayAlumnos[i].nombreAlumno+"<br>";
+			}	
+			
+			}
+			
+		}
+
+	</script>
+</head>
+<body>
+	<fieldset class="empresas">
+		<legend>Infomación de la empresa</legend>
+	
+	<input type="text" id="nombreEmpresa" name="nombreEmpresa" value="" placeholder=" Nombre de la empresa">
+	<br><br>
+	<input type="text" id="cifEmpresa" name="cifEmpresa" value="" placeholder="Cif">
+	<br><br>
+	<input type="text" id="cicloAlumno" name="cicloAlumno" value="" placeholder="Ciclo Alumno">
+	<br><br>
+	<input type="button" id="altaEmpresa" name="altaEmpresa" value="Alta Empresa" onclick="introEmpresa()">
+	<br><br>
+	<input type="button" id="bajaEmpresa" name="bajaEmpresa" value="Baja Empresa" onclick="borrarEmpresa()">
+	<br><br>
+	</fieldset>
+	<fieldset class="alumnos">
+		<legend>Infomación del alumno</legend>
+	
+	<input type="text" id="nombreAlumno" name="nombreAlumno" value="" placeholder=" Nombre del alumno">
+	<br><br>
+	<input type="text" id="DniAlumno" name="DniAlumno" value="" placeholder="Dni">
+	<br><br>
+	<input type="text" id="ciclo" name="ciclo" value="" placeholder="Ciclo">
+	<br><br>
+	<input type="text" id="finCiclo" name="finCiclo" value="" placeholder="Año finalización">
+	<br><br>
+	<input type="button" id="altaAlumno" name="altaAlumno" value="Alta Alumno" onclick="introAlumno()">
+	<input type="button" id="bajaAlumno" name="bajaAlumno" value="Baja Alumno" onclick="borrarAlumno()">
+	<input type="button" id="buscaXCiclo" name="buscaXCiclo" value="Búsquedas por ciclo" onclick="buscarXCiclo()">
+	<input type="button" id="buscaXFin" name="buscaXFin" value="Búsquedas por finalización" onclick="buscarXFin()">
+	</fieldset>
+	<div id="mostrar">
+		
+	</div>
+</body>
+</html>

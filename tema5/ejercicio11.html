@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 11</title>
+	<meta name="description" content="Modificar el ejercicio anterior, creando dos métodos, Uno que permita mostrar los datos de un modelo concreto y otro que permita modificar la Marca.">
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		body{
+			width: 100vw;
+			height: 100vh;
+		}
+	</style>
+	<script type="text/javascript">
+		var coche=function (marca,modelo,anio) {
+			this.marca=marca;
+			this.modelo=modelo;
+			this.anio=anio;
+			this.todo=todoExterna;
+		}
+		function todoExterna(){
+			return this.marca+" "+this.modelo+" "+this.anio;
+		}
+		
+		var coche1= new coche("Peugot","Expert","2016");
+		var coche2= new coche("Audi", "A4", "2007");
+		var coche3= new coche("Opel","Zafira","2005");
+		var coche4= new coche("Mercedes", "Vito", "2002");
+
+		
+	</script>
+</head>
+<body>
+	<button onclick="coche1.todo()">Mostrar</button>
+</body>
+</html>

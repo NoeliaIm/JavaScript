@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 1</title>
+	<link rel="stylesheet" href="">
+	<meta name="description" content="Mostrar en pantalla el código de la tecla pulsada">
+	<script type="text/javascript">
+		
+		function mostrarTecla(elEvento) {
+			
+				var caracter=elEvento.keyCode;
+				document.getElementById('mostrar').innerHTML+=caracter+" ";
+			
+		}
+	</script>
+</head>
+<body onkeypress="mostrarTecla(event)">
+	<div id="mostrar">
+		
+	</div>
+</body>
+</html>

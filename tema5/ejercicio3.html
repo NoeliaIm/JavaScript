@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 3 </title>
+	<meta name="description" content="Impedir escribir en un Text las vocales">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function NoVocales(e) {
+			var teclaPulsada = e.keyCode || e.which;
+			var letra = String.fromCharCode(teclaPulsada);
+			var patron=/[^aeiou]/;
+	
+			
+			if (patron.test(letra)) {
+	
+				document.getElementById('txt').value.InnerHTML=letra;
+			}else return false;
+			
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="txt" name="txt" value="" placeholder="Prueba a escribir vocales" onkeypress="return NoVocales(event)">
+</body>
+</html>

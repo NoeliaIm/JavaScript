@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ejercicio 17</title>
+		<meta name="description" content="Crear el mismo ejercicio anterior mediante un array de clases.
+			a) Crear primeramente una Clase con 3 propiedades (nombre y 3 notas)
+			b) Añadirle una nueva propiedad (nota media) mediante prototype
+		">
+		<script type="text/javascript">
+			var ArrayAlumnos = [];											//Array para almacenar los alumnos
+		
+			function Alumno(nombre, nota1, nota2, nota3) {					//Llamalo igual que las propiedades
+				this.nombre=nombre;											//Asi no te lias
+				this.nota1=nota1;
+				this.nota2=nota2;
+				this.nota3=nota3;
+				this.media = function(){									//Incluyo el metodo dentro de la Clase
+					return (this.nota1 + this.nota2 + this.nota3)/3
+				}
+			}
+	
+			function introducirDatos() {
+				a = document.getElementById('nombre').value;				//Recojo los valores
+				b = parseInt(document.getElementById('nota1').value);
+				c = parseInt(document.getElementById('nota2').value);
+				d = parseInt(document.getElementById('nota3').value);
+				
+				ArrayAlumnos.push(new Alumno(a, b, c, d));					//Creo un objeto y lo meto en el Array
+
+// Esta parte sobra. La pongo para vigilar si funciona
+// Usa "F12" y "CONSOLA" en el navegador para ver los fallos que tienes
+				document.getElementById("zona").innerHTML = "";				//Limpio "ZONA"
+				for (i=0; i<ArrayAlumnos.length; i++) {						//Añado el nombre de cada registro a "ZONA"
+					document.getElementById("zona").innerHTML += ArrayAlumnos[i].nombre + "<br />";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="text" id="nombre" name="nombre" value="" placeholder="Escribe el nombre">
+		<br>
+		<input type="text" id="nota1" name="nota1" value="" placeholder="Escribe la nota">
+		<br>
+		<input type="text" id="nota2" name="nota2" value="" placeholder="Escribe la nota">
+		<br>
+		<input type="text" id="nota3" name="nota3" value="" placeholder="Escribe la nota">
+		<br>
+		<button onclick="introducirDatos()">Enviar</button>
+		<div id="zona"></div>
+	</body>
+</html>

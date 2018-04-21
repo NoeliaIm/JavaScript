@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 24</title>
+	<meta name="description" content="Realizar una clase que permita almacenar:
+Usuario
+Clave de acceso
+Pregunta de seguridad
+Respuesta
+
+Permitir Altas, Bajas, Modificaciones, Consultas individuales, Listados
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var usuarios=[];
+		function Persona(user, pass, question, answ){
+			this.user=user;
+			this.pass=pass;
+			this.question=question;
+			this.answ=answ;
+		}
+
+		function altaUser() {
+			user=document.getElementById('campoUser').value;
+			pass=document.getElementById('campoPass').value;
+			question=document.getElementById('campoQuestion').value;
+			answ=document.getElementById('campoAnsw').value;
+			usuarios.push(new Persona(user, pass, question, answ));
+		}
+		function verListado() {
+			document.getElementById('mostrar').value="";
+			document.getElementById('mostrar').innerHTML+="<br>Usuarios del sistema<br>";
+			for (var i = 0; i < usuarios.length; i++) {
+				document.getElementById('mostrar').innerHTML+=usuarios[i].user+"<br>";
+			}
+		}
+
+		function bajaUser() {
+			var nombre=document.getElementById('campoUser').value;
+			for (var i = 0; i < usuarios.length; i++) {
+				if (nombre==usuarios[i].user) {
+					document.getElementById('mostrar').innerHTML+="<br>Has borrado a "+usuarios[i].user;
+					usuarios.splice(i,1);
+
+				}
+				
+			}
+		}
+		function crearCambios() {
+			var nombre=document.getElementById('campoUser').value;
+			var pasw=document.getElementById('campoPass').value;
+			var ques=document.getElementById('campoQuestion').value;
+			var answe=document.getElementById('campoAnsw').value;
+			for (var i = 0; i < usuarios.length; i++) {
+				if (nombre==usuarios[i].user) {
+					if (pasw.length>0) {
+					usuarios[i].pass=pasw;				
+					}
+					if (ques.length>0) {
+					usuarios[i].question=ques;				
+					}
+					if (answe.length>0) {
+					usuarios[i].answ=answe;				
+					}
+
+				}
+			}
+		}
+		function verUsuario() {
+			var nombre=document.getElementById('campoUser').value;
+			for (var i = 0; i < usuarios.length; i++) {
+				if (nombre==usuarios[i].user) {
+					document.getElementById('mostrar').innerHTML+="<br>"+usuarios[i].user+" "+usuarios[i].pass+" "+usuarios[i].question+" "+usuarios[i].answ+"<br>";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Usuarios</legend>
+			<label>Nombre<input type="text" id="campoUser" name="campoUser" value=""></label>
+			<label>Contraseña<input type="password" id="campoPass" name="campoPass" value=""></label>
+			<label>Pregunta de Seguridad<input type="text" id="campoQuestion" name="campoQuestion" value=""></label>
+			<label>Respuesta<input type="password" id="campoAnsw" name="campoAnsw" value=""></label>
+			<br>
+			<br>
+			<input type="button" id="btnAlta" name="btnAlta" value="Alta" onclick="altaUser()">
+			<input type="button" id="btnBaja" name="btnBaja" value="Baja" onclick="bajaUser()">
+			<input type="button" id="btnCambios" name="btnCambios" value="Modificar" onclick="crearCambios()">
+			<input type="button" id="btnConsultas" name="btnConsultas" value="Consultar" onclick="verUsuario()">
+			<input type="button" id="btnListar" name="btnListar" value="Listado" onclick="verListado()">
+		</fieldset>
+	</form>
+	<div id="mostrar"></div>
+</body>
+</html>

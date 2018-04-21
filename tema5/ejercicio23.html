@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 23</title>
+	<meta name="description" content="Crear un objeto Persona que tenga dos propiedades: Nombre y DineroAhorrado, y dos métodos: Ahorra y Gasta. Crea un array con varias personas (con distintos nombres y distintas cantidades de dinero ahorrado). Y muestra una pantalla similar a la siguiente, desde la que se pueda seleccionar una persona (bien con el nombre o con su posición en la tabla) y una cantidad que podrá ahorrar o gastar. Lógicamente, habrá que comprobar que no pueda gastar más dinero del que tenga ahorrado.">
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		table, th, td{
+			border: 1px solid black;
+		}
+		td#centrar{
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		var personas=[];
+		var cantidad=0;
+		function Persona(nombre, dineroAhorrado){
+			this.nombre=nombre;
+			this.dineroAhorrado=dineroAhorrado;
+			this.ahorra=function(){
+				cantidad=parseInt(document.getElementById('cantidad').value);
+				 this.dineroAhorrado+=cantidad;
+			}
+			this.gasta=function(){
+				cantidad=parseInt(document.getElementById('cantidad').value);
+				if (dineroAhorrado>=cantidad) {
+					this.dineroAhorrado-=cantidad;
+
+				}else{
+					alert("No tienes tanto dinero para gastar");
+				}
+			}
+
+		}
+		for (var i = 0; i < 10; i++) {
+			nombre="N"+i;
+			dineroAhorrado=parseInt((Math.random()*1000)+1);
+			personas.push(new Persona(nombre, dineroAhorrado));
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Persona:</th>
+				<td><input type="text" id="persona" name="persona" value=""></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Cantidad:</th>
+				<td><input type="text" id="cantidad" name="cantidad" value=""></td>
+			</tr>
+			<tr>
+				<td id="centrar" colspan="2">
+					<input type="button" id="ahorrar" name="ahorrar" value="Ahorrar" onclick="personas[document.getElementById('persona').value].ahorra()">
+					<input type="button" id="gastar" name="gastar" value="Gastar" onclick="personas[document.getElementById('persona').value].gasta()">
+				</td>
+			</tr>
+			<tr>
+				<td id="centrar" colspan="2">
+					<input type="button" id="listar" name="listar" value="Listar Grupo">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

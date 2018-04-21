@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 6</title>
+	<meta name="description" content="Realizar el clásico ejercicio, donde deberás desplazar el botón “Si” al intentar acercase a él">
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		#ventana{
+			position: absolute;
+			margin: 10px;
+			border: black solid; 
+			width: 200px;
+			height: 100px;
+		}
+	</style>
+	<script type="text/javascript">
+		function moverVentana() {
+			var anchoTotal=screen.availWidth;
+			var altoTotal=screen.availHeight;
+			var posicionTop=Math.random()*(altoTotal-10)+10;
+			var posicionLeft=Math.random()*(anchoTotal-10)+10;
+			document.getElementById('ventana').style.top=posicionTop+"px";
+			document.getElementById('ventana').style.left=posicionLeft+"px";
+		}
+	</script>
+</head>
+<body>
+	<div id="ventana">
+		<p>¿Cree que va a aprobar este curso?</p>
+		<p style="text-align: center"><button onmouseover="moverVentana()">Si</button><button>No</button></p>
+	</div>
+</body>
+</html>
