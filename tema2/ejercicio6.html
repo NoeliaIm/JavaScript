@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 6</title>
+	<meta charset="utf-8">
+	<meta name="desciption" content="El siguiente programa tiene errores. Corrígelo para que funcione y explica qué hace.
+<html>
+<script>
+/* Programa 6.htm
+var a, b;
+a= prompt(“Escribe la base:”)
+b= prompt(“Escribe la altura:”)
+alert(“Area= “ +(a*b/2);
+</script>
+</html>
+">
+<script type="text/javascript">
+	try{
+	var a, b;
+a= prompt("Escribe la base:");
+b= prompt("Escribe la altura:");
+alert("Area= " +(a*b)/2); 
+/*faltaba el cierre del paréntesis, yo lo he puesto después
+de la multiplicación pero el resultado es el mismo si lo 
+colocamos al final  tal que así ("Area= " +(a*b/2))
+ya que */
+	}catch (e){
+		alert("error "+ e.message);
+	}
+	/*el programa pide la base y la altura de un triángulo
+	y calcula su área*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

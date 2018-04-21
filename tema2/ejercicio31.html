@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 31</title>
+	<meta charset="utf-8">
+	<meta name="decription" content="Realiza un programa para que dos personas puedan jugar al Master Mind. 
+Primeramente el ordenador pedirá una combinación secreta que consistirá en 4 números y que tecleará una de las personas. Después, la otra persona deberá adivinar dicha combinación secreta para lo que dispondrá como máximo de 8 intentos. Cada intento consistirá en escribir 4 números, tras lo cual el ordenador escribirá el número de muertos y de heridos. 
+1.	Un número está muerto si coincide en valor y en posición con la combinación secreta. 
+2.	Un número está herido si coincide en valor pero no en posición con la combinación secreta.  
+
+Por ejemplo: si la combinación secreta es  (5  3  1  2), en el intento (5  1  4  4) hay 1 muerto (el 5) y un herido (el 1). Según esta  definición en el intento (5  1  1  2) habría 3 muertos (el 5, el segundo 1 y el 2) y 1 herido (el primer 1).  
+
+El programa terminará por una de las  dos siguientes situaciones: a) el jugador ha acertado la combinación escrita por el otro o b) se ha llegado a 8 intentos sin acertarla.
+">
+<script type="text/javascript">
+	var minum1, minum2, minum3, minum4, sunum1, sunum2,sunum3, sunum4, muertos, heridos;
+	minum1=parseInt(prompt("Escribe el primer número de la combinación ganadora"));
+	minum2=parseInt(prompt("Escribe el segundo número de la combinación ganadora"));
+	minum3=parseInt(prompt("Escribe el tercer número de la combinación ganadora"));
+	minum4=parseInt(prompt("Escribe el cuarto número de la combinación ganadora"));
+	console.log(minum1+ " "+minum2+" "+minum3+" "+minum4);
+	intentos=0;
+	do{
+	sunum1=parseInt(prompt("Adivina el primer número de la combinación ganadora"));
+	sunum2=parseInt(prompt("Adivina el segundo número de la combinación ganadora"));
+	sunum3=parseInt(prompt("Adivina el tercer número de la combinación ganadora"));
+	sunum4=parseInt(prompt("Adivina el cuarto número de la combinación ganadora"));
+	muertos=0;
+	heridos=0;
+	if (minum1==sunum1 && minum2==sunum2 && minum3==sunum3 && minum4==sunum4) {
+				document.writeln("Has acertado la combinación");
+				break;}
+	if (minum1==sunum1){
+		muertos++;
+
+		}else {
+			if (minum1==sunum2 || minum1==sunum3 || minum1==sunum4) {
+				heridos++;
+			}
+	
+		}    	
+	if (minum2==sunum2){
+		muertos++;
+		}else {
+			if (minum2==sunum1 || minum2==sunum3 || minum2==sunum4) {
+				heridos++;
+			}
+		}
+	if (minum3==sunum3){
+		muertos++;
+		}else {
+			if (minum3==sunum1 || minum3==sunum2 || minum3==sunum4) {
+				heridos++;
+			}
+		}
+	if (minum4==sunum4){
+		muertos++;
+		}else {
+			if (minum4==sunum1 || minum4==sunum2 || minum4==sunum3) {
+				heridos++;
+			}
+		}
+	alert("Muertos= "+muertos+" "+"Heridos= "+heridos);
+	intentos=intentos+1;
+	
+	}while(intentos<=8);
+	if (intentos==8) {
+	document.writeln("Has agotado los 8 intentos");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

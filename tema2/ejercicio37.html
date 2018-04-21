@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 37</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Realizar un ejercicio que permita realizar la división de dos números mediante restas sucesivas, mostrando el cociente y el resto.">
+	<script type="text/javascript">
+		var divisor, dividendo, cociente, resto;
+		dividendo=parseInt(prompt("Escribe el dividendo"));
+		divisor=parseInt(prompt("Escribe el divisor"));
+		cociente=0;
+		for (var i = 0; dividendo>=divisor; i++) {
+			dividendo=dividendo-divisor;
+			cociente=cociente+1;
+		}
+		document.writeln("El cociente de la división es "+cociente+" y el resto es "+dividendo);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

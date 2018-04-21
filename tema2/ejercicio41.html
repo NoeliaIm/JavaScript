@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 41</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Hacer un programa que escriba los números del 1 al 25 de 3 en 3 con un bucle do...while y escribiendo 4 números en cada línea.">
+	<script type="text/javascript">
+		var num=1;
+		var cuarteto=0;
+		do{
+			document.writeln(num);
+			num+=3;
+			cuarteto+=1;
+			if (cuarteto==4) {
+				document.writeln("<br>");
+				cuarteto=0;
+			}
+		}while (num<=25);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

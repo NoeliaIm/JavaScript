@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 18</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Realiza el diagrama de flujo y el programa en JavaScript que haga lo siguiente:  
+1.	Se teclearán dos números enteros por pantalla hasta que los dos sean menores que 50.
+2.	El más pequeño se irá incrementando de 5 en 5 y el más grande se decrementará de 2 en 2, se irán imprimiendo a la vez que se van generando. El programa terminará cuando los valores se crucen
+">
+<script type="text/javascript">
+	
+	var num1=parseInt(prompt("Escribe un número"));
+	var num2=parseInt(prompt("Escribe un número"));
+	if (num1>50 || num2>50) {
+		alert("Los números deben ser menores que 50");
+		num1=parseInt(prompt("Escribe un número"));
+		num2=parseInt(prompt("Escribe un número"));
+	}
+	
+	if (num1>num2) {
+			do{
+			num2=num2+5;
+			num1=num1-2;
+			document.writeln(num1 + " "+ num2+ "<br>");
+		}while(num1>num2);
+		}
+		else if (num2>num1) {
+			do{
+			num1=num1+5;
+			num2=num2-2;
+			document.writeln(num1 + " "+ num2+ "<br>");
+		}while (num2>num1);
+		}
+			
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

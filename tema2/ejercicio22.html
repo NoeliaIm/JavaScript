@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 22</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Supongamos que nos preguntan qué porcentaje de hombres y qué porcentaje de mujeres hay un salón de clases. Lo primero que tenemos que hacer es preguntar el total de personas que hay, luego hacer un ciclo que en cada iteración pregunte el sexo de cada alumno. En base a esos datos se calculan los porcentajes.">
+	<script type="text/javascript">
+		var personas,sexo,hombres, mujeres, porcentajeHombres, porcentajeMujeres;
+		hombres=0;
+		mujeres=0;
+		personas=parseInt(prompt("¿Cuántas personas hay en la sala?"));
+		for (var i = 0; i<personas; i++) {
+			sexo=prompt("¿Eres hombre o mujer? Escribe H o M");
+				if (sexo=="H") {
+					hombres=hombres+1;
+				} else {
+					if (sexo=="M") {
+						mujeres=mujeres+1;
+					}
+				}
+			}
+		porcentajeHombres=(hombres*100)/personas;
+		porcentajeMujeres=(mujeres*100)/personas;
+		document.writeln("Hay un "+porcentajeHombres.toFixed(2)+"% de hombres y un "+porcentajeMujeres.toFixed(2)+"% de mujeres");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

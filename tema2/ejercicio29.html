@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 29</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Dadas tres variables enteras (v1, v2 y v3) escribir condiciones que expresen lo siguiente:  
+Todas las variables son cero. 
+Todas las variables son positivas. 
+Todas las variables tienen el mismo signo. 
+Todos sus valores son distintos. 
+Dos de sus valores coinciden. 
+Como máximo dos de sus valores coinciden. 
+El valor de v2 está comprendido entre los de v1 y v3.
+">
+<script type="text/javascript">
+	var v1, v2, v3;
+	v1=parseInt(prompt("Escribe un número"));
+	v2=parseInt(prompt("Escribe un número"));
+	v3=parseInt(prompt("Escribe un número"));
+	if (v1==0 && v2==0 && v3==0) {
+		document.writeln("Todas las variables son 0 <br>");
+	}
+	if (v1>=0 && v2>=0 && v3>=0) {
+		document.writeln("Todas las variables son positivas <br>");
+	}
+	if ((v1>=0 && v2>=0 && v3>=0) ||(v1<0 && v2<0 && v3<0)) {
+		document.writeln("Todas las variables tienen el mismo signo <br>");
+	}
+	if (v1!=v2 && v2!=v3 && v3!=v1) {
+		document.writeln("Todas las variables son distintas <br>");
+	}
+	if ((v1==v2 || v1==v3) || (v3==v2 || v3==v1) || (v2==v1 || v2==v3) ) {
+		document.writeln("Dos de sus valores coinciden <br>");
+	}
+	if ((v1==v2 && v1!=v3) || (v3==v2 && v3!=v1) || (v1==v3 && v2!=v3) ) {
+		document.writeln("Solo dos de sus valores coinciden");
+	}
+	if ((v2>v1)&&(v2<v3)|| ((v2<v1)&&(v2>v3))) {
+		document.writeln("El segundo valor está comprendido entre los otros dos valores");
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 24</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Calcula cuantos números pares hay entre dos introducidos">
+	<script type="text/javascript">
+		var num1, num2, num3, par;
+		num3=0;
+		par=0;
+		num1=parseInt(prompt("Introduce un número"));
+		num2=parseInt(prompt("Introduce un número"));
+		if (num1>num2) {
+			for (var i = 0; num2<num1; i++) {
+				num3=num2+1;
+				if (num3%2==0) {
+					par=par+1;
+				}
+				num2++;
+			}
+		} else {
+			for (var i = 0; num1<num2; i++) {
+				num3=num1+1;
+				if (num3%2==0) {
+					par=par+1;
+				}
+				num1++;
+		}
+		}
+		document.writeln("Entre los dos números hay "+par+" números pares");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

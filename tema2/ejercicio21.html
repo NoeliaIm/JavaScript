@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 21</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Crear un programa que muestre un menú como este:
+Salir
+Sumatorio
+Factorial
+Tras mostrar el menú, el programa debe leer un número del 1 al tres si se elige 1, el programa acaba. Si se elige 2 se calcula el sumatorio del número, si se elige 3 se calcula el factorial (en ambos casos el programa pedirá escribir el número sobre el que se calcula el sumatorio o el factorial). Tras calcular el sumatorio o el factorial e indicar el resultado, el programa volverá a mostrar el menú y así sucesivamente.
+">
+<script type="text/javascript">
+	var opcion, num;
+	var acumulado=0;
+	var factor=1;
+	do{
+		opcion=prompt("Elige una opción\n1-Salir\n2-Sumatorio\n3-Factorial");
+		if (opcion!=1 && opcion!=2 && opcion!=3) {
+			alert("La opción no es válida");
+		}
+	}
+	while (opcion!=1 && opcion!=2 && opcion!=3);
+	if (opcion==1) {
+		document.writeln("Has elegido salir del programa.<br>Si quieres volver a hacer un cálculo refresca la página.");
+	} 
+	if (opcion==2) {
+			num=parseInt(prompt("Introduce el número del que quieres saber el sumatorio"));
+			for (var i = 1; i<=num; i++) {
+				acumulado=acumulado+i;
+			}
+			document.writeln("El sumatorio de "+num+" es "+acumulado);
+		} else {
+			num=parseInt(prompt("Introduce el número del que quieres saber el factorial"));
+			for (var i = 1; i<=num; i++) {
+				factor=factor*i;
+		}
+		document.writeln("El factorial de "+num+" es "+factor);
+	}
+
+		
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 38</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Escribir un programa donde el usuario elija entre lo siguiente
+Pulse 1 si desea cenar Costilla
+Pulse 2 si desea cenar Pescado
+Y luego se le pregunte también si desea o no postre
+
+Usar las funciones: prompt y confirm para pedir los datos
+	Si eligió cenar Costilla->pago 23 €
+	Si eligió cenar Pescado->pago 15 €
+	Si tomo postre->el postre valió 3 €
+
+Calcular el valor total de la cena dependiendo de las opciones que elija por teclado el usuario, incluyendo una propina del 6%.
+">
+<script type="text/javascript">
+	var plato, postre, propina, factura, total;
+	plato=parseInt(prompt("Elige un plato\n1-Costilla\n2-Pescado"));
+	postre=confirm("¿Quiere postre?");
+	if (plato==1) {
+		plato=23;
+	} else { 
+		if (plato==2) {
+		plato=15;
+	}
+	}
+	if (postre) {
+		postre=3;
+	}else {
+		if (postre) {
+			postre=0;
+		}
+	}
+	factura=plato+postre;
+	propina=factura*0.06;
+	total=factura+propina;
+	document.writeln("El total de la comida es "+total);
+</script>
+</head>
+<body>
+
+</body>
+</html>

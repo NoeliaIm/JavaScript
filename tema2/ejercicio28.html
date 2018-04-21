@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 28</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Leer 3 números (día, mes y año) y decir si corresponde a una fecha correcta. Un año es bisiesto si es divisible por 4 excepto si acaba en 00 en cuyo caso es bisiesto sólo si es divisible por 400">
+	<script type="text/javascript">
+		var mes, dia, anio, diaCorrecto, mesCorrecto;
+		diaCorrecto=true;
+		dia=parseInt(prompt("Introduce el día"));
+		mes=parseInt(prompt("Introduce el mes"));
+		anio=parseInt(prompt("Introduce el año"));
+		if (dia>31 || dia<1) {
+			diaCorrecto=false;
+			document.writeln("El día señalado no es correcto");
+		} else {
+			diaCorrecto=true;
+		}
+		if (mes>12 || mes<1) {
+			mesCorrecto=false;
+			document.writeln("El mes señalado no es correcto");
+		} else {
+			mesCorrecto=true;
+		}
+		if (dia==31) {
+			switch (mes){
+				case 1: diaCorrecto=true;
+						break;
+				case 3: diaCorrecto=true;
+						break;
+				case 5: diaCorrecto=true;
+						break;
+				case 7: diaCorrecto=true;
+						break;
+				case 8: diaCorrecto=true;
+						break;
+				case 10: diaCorrecto=true;
+						break;
+				case 12: diaCorrecto=true;
+						break;	
+				default: document.writeln("Este mes no tiene 31 días");								
+			}
+		}
+		if (dia==29 && mes==2) {
+		if (anio%4==0 || anio%400==0) {
+			diaCorrecto=true;
+		} else {
+			diaCorrecto=false;
+		}
+		}
+		if (diaCorrecto==true && mesCorrecto==true) {
+			document.writeln("La fecha es correcta");
+			}else{
+			document.writeln("La fecha no es correcta");
+			}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
