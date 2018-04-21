@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 10</title>
+	<meta name="description" content="Realizar el siguiente ejercicio. Cuando el usuario pulse en “Ver valores”, mostrar el número de elementos que forman el select y qué opción está seleccionada.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function verValores(){
+			// body...
+			var elementos=document.miForm.elements.edades.length; 
+			var opcion= document.miForm.edades.options[document.miForm.edades.selectedIndex].value;
+			var mensaje="Elementos: "+elementos +"\n";
+			mensaje+= "Edad: "+opcion;
+			alert(mensaje);
+		}
+	</script>
+</head>
+<body>
+	<form name="miForm">
+		<select name="edades">
+			<option value=">18" name=">18">Mayor de 18 años</option>
+			<option value="<18" name="<18">Menor de 18 años</option>
+			
+		</select>
+		<br>
+		
+	</form>
+	<a href="mostrar" title="" onclick="verValores()">Ver Valores</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 14</title>
+	<meta name="description" content="Crear una caja de texto que comprueba si se han introducido datos cuando pierde el foco. En caso de que no se introduzcan datos, se devolverá el foco al campo y se mostrará un mensaje en la barra de estado">
+	<link rel="stylesheet" href="">
+	
+	
+</head>
+<body>
+	<form name="formulario">
+		<textarea id="texto" onblur="validar()">
+			
+		</textarea>
+	</form>
+	<script type="text/javascript">
+		function validar(){
+		
+			if (document.getElementById("texto").value=='') {
+				alert("Intruduzca un mensaje");
+				
+			} 
+			
+		}
+	</script>
+	
+</body>
+</html>

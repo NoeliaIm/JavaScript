@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 15</title>
+	<meta name="content" content="Crear un array bidimensional que permita almacenar:
+
+Título de la página	Dirección de la página
+Vacía	
+Google	http://www.google.es
+Gmail	http://www.gmail.es
+…	…
+Mostrar un formulario que muestre en pantalla, todas las páginas que se pueden abrir, permitiendo abrir cualquiera de ellas en una nueva ventana.
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var pagina=new Array(2);
+		pagina=['titulo', 'direccion'];
+		for (var i = 0; i <2; i++) {
+			pagina[i]=new Array(3);
+		}
+		pagina[0][0]='Vacia';
+		pagina[0][1]='Google';
+		pagina[0][2]='Gmail';
+		pagina[1][0]='';
+		pagina[1][1]='http://www.google.es';
+		pagina[1][2]='http://www.gmail.es';
+	</script>
+</head>
+<body>
+	<form>
+		<table>
+			<caption></caption>
+			<thead>
+				<tr>
+					<th>Título de la página</th>
+					<th>Dirección de la página</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="button" name="btn1" value="<script type='text/javascript'>document.write(pagina[0][0])</script> "onclick= window.open("","vacia")>
+
+
+						</td>
+					<td><script type="text/javascript">document.write(pagina[1][0])</script></td>
+				</tr>	
+				<tr>
+					<td><script type="text/javascript">document.write(pagina[0][1])</script></td>
+					<td><script type="text/javascript">document.write(pagina[1][1])</script></td>
+				</tr>
+				<tr>
+					<td><script type="text/javascript">document.write(pagina[0][2])</script></td>
+					<td><script type="text/javascript">document.write(pagina[1][2])</script></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</form>
+</body>
+</html>

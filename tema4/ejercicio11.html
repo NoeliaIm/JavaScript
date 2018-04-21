@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 11</title>
+	<meta name="description" content="Realizar un cronómetro">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var c = 0;
+var t;
+var timer_is_on = 0;
+
+function iniciar() {
+    document.getElementById("txt").value = c;
+    c = c + 1;
+    t = setTimeout(function(){ iniciar() }, 1000);
+}
+
+function startCount() {
+    if (!timer_is_on) {
+        timer_is_on = 1;
+        iniciar();
+    }
+}
+
+function parar() {
+    clearTimeout(t);
+    timer_is_on = 0;
+}
+	</script>
+</head>
+<body>
+	<form style="text-align: center; margin-top: 30px">
+		<input type="text" id="txt" size="8" name="display" value="00:00:0">
+		<input type="button" name="inicio" value="Iniciar" onclick="iniciar()">
+		<br>
+		<br>
+		<input type="button" name="paro" value="Parar" onclick="parar()">
+		<input type="button" name="cero" value="Cero" onclick=txt.value="00:00:0">
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 8</title>
+	<meta name="description" content="Realiza el mismo ejercicio, pero abriendo tantas ventanas como quiera el usuario">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function abreVentanas(cantidad) {
+			// body...
+			var cantidad=parseInt(cantidad);
+console.log(cantidad);
+			for (var i = 1; i <=cantidad; i++) {
+				window.open("");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="miForm">
+	<p>Escribe la cantidad de ventanas que quieres abrir</p>
+	<input type="text" id="numeroVentanas" name="cantidad" value="">
+	<input type="button" name="ventana" value="Haz click" onclick="abreVentanas(miForm.numeroVentanas.value)">
+	</form>
+</body>
+</html>

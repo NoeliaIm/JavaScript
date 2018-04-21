@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 9</title>
+	<meta name="description" content="Mostrar el siguiente formulario. Cuando el usuario pulse en “Ver valores”, deberás mostrar los tres checkbox con sus valores lógicos.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function verValores() {
+			// body...
+			msg="Opcion 1:"+miForm.Opcion1.checked+"\n";
+                msg+="Opcion 2:"+miForm.Opcion2.checked+"\n"; 
+                msg+="Opcion 3:"+miForm.Opcion3.checked+"\n"; 
+                alert(msg); 
+		}
+	</script>
+</head>
+<body>
+	<form name="miForm">
+		<input type="checkbox" name="Opcion1">Opción 1 <br>
+		<input type="checkbox" name="Opcion2">Opción 2
+		<br>
+		<input type="checkbox" name="Opcion3">Opción 3
+		<br>
+		
+	</form>
+	<a href="mostrar" title="" onclick="verValores()">Ver valores</a>
+</body>
+</html>

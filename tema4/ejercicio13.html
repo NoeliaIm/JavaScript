@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 13</title>
+	<meta name="description" content="Teniendo el siguiente formulario:
+	Acceder a esas propiedades y mostrarlas:">
+	<link rel="stylesheet" href="">
+	<!--<form NAME="DatosP" 
+	 TARGET="primera"
+	 ACTION="mailto:usuario@dominio"
+	 METHOD= POST
+	 ENCTYPE="Text/plain">
+ <p>NOMBRE: <input type="text" size="10" name="texto1"> </p>
+ <p>APELLIDOS: <input type="text" size="15" name="texto2"> </p>
+</form> -->
+</head>
+<body>
+	<form name="DatosP" target="primera" enctype="Text/plain" action="mailto:usuario@dominio" method="post">
+		<p>NOMBRE: <input type="text" name="texto1" size="10"></p>
+		<p>APELLIDOS: <input type="text" name="texto2" size="15"></p>
+		
+	</form>
+	<script type="text/javascript">
+		document.write("<br>El nombre del formulario es: "+document.forms["DatosP"].name);
+		document.write("<br>El formulario es enviado a "+document.forms["DatosP"].action);
+		document.write("<br>El formulario enviará sus datos codificados como: "+document.forms["DatosP"].enctype);
+		document.write("<br>El formulario contiene "+document.forms["DatosP"].length+" elementos");
+		document.write("<br>El formulario se envía por el método "+document.forms["DatosP"].method);
+		document.write("<br>El formulario se mostrará en la ventana llamada "+document.forms["DatosP"].target);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 20</title>
+	<meta name="description" content="Realiza un ejercicio trabajando con los objetos window y document que permita crear una nueva ventana con un tamaño de 300x200 y conteniendo un button que permita cerrarla. Desde el padre, controlar cuando se cierra la ventana hija, mostrando un mensaje. (INCLUIR)">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		
+		function abrirVentana() {
+			miVentana=window.open('', 'ventanaNueva',"height=200, width=300");
+			var texto="";
+			
+			texto+='<input type="button" name="abrirVentana" value="Abrir Ventana" onclick="window.close()">'
+			
+			document.getElementsByTagName('body').innerHTML=texto;
+			
+		}
+
+	</script>
+</head>
+<body>
+	<input type="button" name="abrirVentana" value="Abrir Ventana" onclick="abrirVentana()">
+</html>

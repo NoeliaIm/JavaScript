@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 5</title>
+	<meta name="description" content="Realiza un ejercicio trabajando con el objeto document que permita seleccionar un color para modificar el color de la página.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function modificarColor(color) {
+			// body...
+			document.bgColor=color;
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<p>Selecciona un color para el fondo de la página</p>
+		<select name="color">
+			<option value="red">Rojo</option>
+			<option value="blue">Azul</option>
+			<option value="yellow">Amarillo</option>
+			<option value="green">Verde</option>
+		</select>
+			<input type="button" name="cambiar" value="Modifica el color" onclick="modificarColor(form.color.value)">
+		
+	</form>
+</body>
+</html>

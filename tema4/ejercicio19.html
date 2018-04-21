@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 19</title>
+	<meta name="description" content="Realiza un ejercicio trabajando con el objeto location que muestre en pantalla la URL completa de la página que está visitando, el path name y el protocolo utilizado.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var texto="";
+		texto+="URL completa: "+location.href;
+		texto+="<br>Path Name: "+location.pathname;
+		texto+="<br>Protocolo: "+location.protocol;
+	</script>
+</head>
+<body>
+	<p id="location"><script type="text/javascript">
+		document.getElementById('location').innerHTML=texto;
+	</script></p>
+</body>
+</html>

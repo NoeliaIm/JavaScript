@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 26</title>
+	<link rel="stylesheet" href="">
+	<meta name="description" content="Modificar el color de fondo de un div, a partir de la generación aleatoria de los tres colores básicos">
+	<script type="text/javascript">
+		function cambiarColor() {
+			var color=Math.random()*100;
+			if (color<33) {
+				document.getElementById('midiv').style.backgroundColor='red';
+			}else if (color>=33 && color<66) {
+				document.getElementById('midiv').style.backgroundColor='green';
+			}else if (color>=66 && color<=100) {
+				document.getElementById('midiv').style.backgrounColor='blue';
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="midiv" style="background-color: transparent; width: 500px; height: 500px; ">
+		<input type="button" name="cambiandoColor" value="Cambiar Color" onclick="cambiarColor()">
+	</div>
+</body>
+</html>
