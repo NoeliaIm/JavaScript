@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 9</title>
+	<meta name="description" content="Permitir ocultar/mostrar diversos párrafos de una página.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function ocultar() {
+			var parrafos=document.getElementsByTagName('p');
+			var cambios=0;
+			for (var i = 0; i < parrafos.length; i++) {
+				if (parrafos[i].innerText!="") {
+					parrafos[i].innerText="";
+					cambios++;
+				}
+				if(cambios==1){
+					break;
+				}
+
+			}
+		}
+		function mostrar() {
+			var parrafos=document.getElementsByTagName('p');
+			var texto=[];
+			for (var i = 0; i < parrafos.length; i++) {
+					texto.push(parrafos[i].innerText);
+				}	
+			var cambios=0;
+			for (var i = 0; i < parrafos.length; i++) {
+				if (parrafos[i].innerText=="") {
+					parrafos[i].innerText=texto[i];
+					cambios++;
+				}
+				if(cambios==1){
+					break;
+				}
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>La <b><a href="/wiki/Conquista_de_Mallorca_por_Jaime_I" title="Conquista de Mallorca por Jaime I">conquista para los reinos cristianos de la isla de Mallorca</a></b> fue lograda definitivamente por el rey <a href="/wiki/Jaime_I_de_Arag%C3%B3n" title="Jaime I de Aragón">Jaime I de Aragón</a> entre 1229 y 1231. La ciudad de <a href="/wiki/Madina_Mayurqa" title="Madina Mayurqa">Madîna Mayûrqa</a> (actual <a href="/wiki/Palma_de_Mallorca" class="mw-redirect" title="Palma de Mallorca">Palma de Mallorca</a>) cayó en diciembre del primer año, pero la resistencia <a href="/wiki/Islam" title="Islam">musulmana</a> en las montañas duró tres más. El desembarco de las tropas cristianas había sido pactado con un <a href="/wiki/Cacique" title="Cacique">cacique</a> local en la bahía de <a href="/wiki/Pollen%C3%A7a" class="mw-redirect" title="Pollença">Pollensa</a>, pero los fuertes vientos de <a href="/wiki/Mistral_(viento)" title="Mistral (viento)">mistral</a> obligaron a Jaime I a desviarse hacia la parte sur de la isla, por lo que finalmente se llevó a cabo durante la medianoche del 10 de septiembre de 1229, en la costa de la actual localidad turística de <a href="/wiki/Santa_Ponsa" title="Santa Ponsa">Santa Ponsa</a>, núcleo de población del término municipal de <a href="/wiki/Calvi%C3%A1" title="Calviá">Calviá</a>.</p>
+	<p>Tras la conquista, Jaime I repartió el territorio entre los <a href="/wiki/Noble" class="mw-redirect" title="Noble">nobles</a> que le acompañaron en la campaña, tal y como se dispone en el <i><a href="/wiki/Llibre_del_Repartiment_de_Mallorca" title="Llibre del Repartiment de Mallorca">Llibre del Repartiment</a></i>. Posteriormente, adjudicó también la conquista de <a href="/wiki/Ibiza_(isla)" class="mw-redirect" title="Ibiza (isla)">Ibiza</a>, la cual finalizó en 1235, mientras que <a href="/wiki/Menorca" title="Menorca">Menorca</a> le rendía vasallaje desde 1231. Estando el monarca ya asentado en la isla creó el <a href="/wiki/Reino_de_Mallorca" title="Reino de Mallorca">Reino de Mallorca</a>, el cual pasó a ser independiente de la <a href="/wiki/Corona_de_Arag%C3%B3n" title="Corona de Aragón">Corona de Aragón</a> por las disposiciones de su testamento, hasta la posterior conquista por parte de <a href="/wiki/Pedro_IV_de_Arag%C3%B3n" title="Pedro IV de Aragón">Pedro IV</a>, junto al paréntesis de dominio aragonés durante el reinado de <a href="/wiki/Jaime_II_de_Mallorca" title="Jaime II de Mallorca">Jaime II de Mallorca</a>.</p>
+	<p>La <a href="/wiki/Ratificaci%C3%B3n" title="Ratificación">ratificación</a> del pacto entre pares e iguales, concluido entre Jaime I y los <a href="/wiki/Magnate" title="Magnate">magnates</a> eclesiásticos y <a href="/wiki/Seglar" class="mw-redirect" title="Seglar">seglares</a> para llevar a cabo la invasión, se realizó en <a href="/wiki/Tarragona" title="Tarragona">Tarragona</a>, el 28 de agosto de 1229. Estuvo abierto en condiciones de paridad a cuantos quisiesen participar. Su lema, en <a href="/wiki/Lat%C3%ADn" title="Latín">latín</a>, fue el siguiente: <i>«omnes homines de térra nostra et aliunde venientes que hoc jurare voluerint et venire nobiscum in viaticum supradictum -ad ínsulas Baleares»</i>.
+	<br>
+	<a onclick="ocultar()" href="" title="">Ocultar contenidos</a>
+	<br>
+	<a onclick="mostrar()" href="" title="">Mostrar contenidos</a>
+
+</body>
+</html>

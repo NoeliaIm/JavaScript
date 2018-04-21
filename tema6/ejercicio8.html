@@ -1,0 +1,64 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ejercicio 8</title>
+		<meta name="description" content="Permitir mover una imagen de 5 en 5 pixeles en todas direcciones, y colocarlo en la posición inicial">
+		<link rel="stylesheet" href="">
+		<style type="text/css" media="screen">
+		body{
+			height: 100vh;
+			width: 100vw;
+		}
+		#bomba{
+			position: absolute;
+			margin-top: -84px;
+			margin-left: -61px;
+			left: 600px;
+			top: 200px;
+		}	
+
+		</style>
+		<script type="text/javascript">
+			
+			function moverDerecha() {
+				/*var imagen=document.getElementById('bomba');
+				var posicionL=imagen.currentStyle['top'];*/	
+
+				var posicionL=document.getElementById('bomba').style.left;
+				posicionL-=5;
+				document.getElementById('bomba').style.left=posicionL+"px";
+
+			}
+			function moverIzquierda() {
+				var posicionL=document.getElementById('bomba').style.left;
+				posicionL+=5;
+				document.getElementById('bomba').style.left=posicionL+"px";
+			}
+			function moverArriba() {
+				var posicionL=document.getElementById('bomba').style.top;
+				posicionL-=100;
+				document.getElementById('bomba').style.top=posicionL+"px";
+			}
+			function posicionInicial() {
+				document.getElementById('bomba').style.top="200px";
+				document.getElementById('bomba').style.left="600px";
+			}
+		</script>
+		
+	</head>
+	<body>
+		<div>
+			<img id="bomba" src="bomba.jpg" alt="bomba">
+	 	</div>
+		<div>
+			<ul>
+				<li onclick="moverDerecha()"><a href="">Mover 5px a la derecha</a></li>
+				<li onclick="moverIzquierda()"><a href="">Mover 5px a la izquierda</a></li>
+				<li onclick="moverArriba()"><a href="">Mover 100px arriba</a></li>
+				<li onclick="posicionInicial()"><a href="">Mover a la posición inicial</a></li>
+			</ul>
+		</div>
+	</body>
+	</html>

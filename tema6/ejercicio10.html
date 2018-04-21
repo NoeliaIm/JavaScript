@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 10</title>
+	<meta name="description" content="Permitir ocultar/mostrar diversos párrafos de una página">
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		.oculto{
+			display: none;
+		}
+		.visible{
+			display: inline;
+		}
+	</style>
+	<script type="text/javascript">
+		function muestra() {
+  var elemento = document.getElementById("texto");
+  elemento.className = "visible";
+ 
+  var enlace = document.getElementById("enlace");
+  enlace.className = "oculto";
+}
+	</script>
+</head>
+<body>
+	<p><b>Moon</b>, or the Moon, is <a href="/wiki/Earth" title="Earth">Earth</a>'s only natural satellite. It is the brightest object in the night sky but gives off no light of its own. Instead, it reflects light from the <a href="/wiki/Sun_(star)" class="mw-redirect" title="Sun (star)">Sun</a>. Like Earth and the rest of the <a href="/wiki/Solar_System" class="mw-disambig" title="Solar System">solar system</a>, the Moon is about 4.6 <a href="https://en.wiktionary.org/wiki/milliard" class="extiw" title="wikt:milliard">milliard</a> (billion) years old.</p>
+	<a id="enlace" href="#" onclick="muestra(); return false;">Seguir leyendo</a>
+	<span id="texto" class="oculto">
+	<p>The Moon is much smaller than <a href="/wiki/Earth" title="Earth">Earth</a>. The Moon's average radius (distance from its centre to its surface) is 1,737.4 km), about 27% of the radius of Earth. The Moon is also much less massive than Earth. The Moon has a mass (amount of matter) of 7.35 x 10<sup>19</sup> tonnes. Earth is about 81 times that massive. The Moon's density (mass divided by volume) is about 3.34 g/cm<sup>3</sup>, roughly 60% of Earth's density.</p>
+	<p>Because the Moon has less mass than Earth, the force due to gravity at the lunar surface is only about 1/6 of that on Earth. Thus, a person standing on the Moon would feel as if his or her weight had decreased by 5/6. And if that person dropped a stone, the stone would fall to the surface much more slowly than the same stone would fall to Earth.</p>
+	<p>Despite the Moon's relatively weak gravitational force, the Moon is close enough to Earth to produce tides in Earth's waters. The average distance from the centre of Earth to the centre of the Moon is 384,467 km. That distance is growing, but extremely slowly. The Moon is moving away from Earth at a speed of about 3.8 cm per year.</p>
+	<p>The temperature at the lunar equator ranges from extremely low to extremely high: from about –173°C at night to +127°C in the daytime. In some deep craters near the Moon's poles, the temperature is always near –240°C.</p>
+	</span>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 7</title>
+	<meta name="decription" content="Pedir un texto en un textArea, modificando el titulo de ese textArea con el texto escrito">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function cambiaTexto() {
+			var texto=document.getElementById('areaDeTexto').value;
+			document.getElementById('capa').innerHTML=texto;
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>Cambiar el contenido de una capa</h1>
+	<p id="capa">Contenido de mi capa</p>
+	<textarea name="areaDeTexto" id="areaDeTexto"></textarea>
+	<input type="button" id="cambiarTexto" name="cambiarTexto" value="Cambiar Texto" onclick="cambiaTexto()">
+</body>
+</html>

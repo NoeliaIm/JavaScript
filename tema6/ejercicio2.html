@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 2</title>
+	<meta name="description" content="Sobre un DIV ya creado, añadir nuevos elementos Text, con un background-color azul y un color amarillo. Con cada elemento Text nuevo, cambiar el alto del DIV aumentándolo en 30 píxeles.">
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		#creado{
+			background-color: red;
+			width: 300px;
+			height: 300px;
+		}
+	</style>
+	<script type="text/javascript">
+		function crearText() {
+			
+			var caja=document.createElement("input");
+			caja.type="text";
+			caja.value="Caja de texto";
+			caja.style.color="yellow";
+			caja.style.backgroundColor="blue";
+			var elementoDiv=document.getElementById('creado');
+			var largo=elementoDiv.offsetHeight;
+			var nuevoLargo=largo+30;
+			creado.style.height=nuevoLargo+"px";
+			document.getElementById('creado').appendChild(caja);
+		}
+	</script>
+</head>
+<body>
+	<div id="creado">
+		<input type="button" id="creaTxt" name="creaTxt" value="Crear Text" onclick="crearText()">
+		<br>
+
+	</div>
+	<!-- Si deseas determinar la altura (height) de un bloque HTML en javascript, existen dos métodos para hacerlo dependiendo del navegador:
+element.offsetHeight
+element.style.pixelHeight
+
+
+Existe tambien otro método que permite determinar la altura de un bloque HTML cualquiera que sea el navegador: -->
+
+<script type="text/javascript"> <!-- var divHeight; var obj = document.getElementById('id_element'); if(obj.offsetHeight) {divHeight=obj.offsetHeight;} else if(obj.style.pixelHeight){divHeight=obj.style.pixelHeight;} //--> </script> 
+</body>
+</html>

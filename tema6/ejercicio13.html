@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 13</title>
+	<meta name="description" content="Al pulsar sobre un DIV, generar un evento onMouseOver que muestre un alert cada vez que estemos sobre ese DIV. Incluir un botón que pueda suprimir ese evento.">
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		#objetoEvento{
+			border: 1px solid black;
+			background-color:  yellow;
+		}
+	</style>
+	<script type="text/javascript">
+		function escuchador() {
+			document.getElementById('objetoEvento').addEventListener('click',aniadirEvento,false);
+
+		}
+		function mostrarAlert (){
+			alert("Hola a tod@s!");
+		}
+		function aniadirEvento() {
+			document.getElementById('objetoEvento').onmouseover=mostrarAlert;
+			
+		}
+		function eliminarMouseOver() {
+			
+			document.getElementById('objetoEvento').onmouseover="";
+		}
+	</script>
+</head>
+<body onload="escuchador()">
+	<div id="objetoEvento">
+		<p>Cuando hagas click sobre el párrafo se registrará en el div (objeto del DOM) un <strong>escuchador de eventos</strong> mediante el método <strong>addEventListener</strong>.</p>
+		<p>Como argumentos deben especificarse, el tipo de evento, la función manejadora del evento y un boleano, para indicar si se captura el evento</p>
+	</div>
+	<div id="restoHTML">
+		<p>Al pulsar el botón se eliminará el manejador de eventos asociado al evento <em>mouseover</em>, que has de crear haciendo click en la capa amarilla.</p>
+		<br>
+		<input  onclick="eliminarMouseOver()" type="button" id="quitar" name="quitar" value="Quitar Evento">
+	</div>
+</body>
+</html>

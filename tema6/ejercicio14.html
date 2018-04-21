@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 14</title>
+	<meta name="description" content="Crear una página con varios <DIV>, <p>, <strong>, … y mostrar desde el evento click, el evento que se genera, sobre qué objeto, y el código HTML que integra cada objeto.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function escuchador(){
+		document.body.addEventListener('click',mostrarObjeto, false);
+
+		}
+		function mostrarObjeto(event) {
+				var mensaje="Tipo de evento: " + event.type + "\n\r";
+				mensaje+="Sobre el objeto: "+event.target.tagName+"\n\r";
+				mensaje+="Código HTML del objeto: "+event.target.outerHTML+"\n\r";
+				alert(mensaje);
+
+		}
+	</script>
+</head>
+<body onload="escuchador()">
+	<p><b>Matías Corvino</b> (en latín, <b>Matthias Corvinus</b>; en húngaro, <b>Hunyadi Mátyás</b>; en croata, Matija Korvin; en rumano, <b>Matei Corvin</b>; en eslovaco, <b>Matej Korvín</b>; en checo, <b>Matyáš Korvín</b>; <a href="/wiki/Cluj-Napoca" title="Cluj-Napoca">Kolozsvár</a>, <a href="/wiki/23_de_febrero" title="23 de febrero">23 de febrero</a> de <a href="/wiki/1443" title="1443">1443</a>-<a href="/wiki/Viena" title="Viena">Viena</a>, <a href="/wiki/6_de_abril" title="6 de abril">6 de abril</a> de <a href="/wiki/1490" title="1490">1490</a>), nacido <b>Matías Hunyadi</b> y también denominado <b>Matías I</b>, fue <a href="/wiki/Anexo:Reyes_de_Hungr%C3%ADa" title="Anexo:Reyes de Hungría">rey de Hungría</a> y <a href="/wiki/Anexo:Gobernantes_de_Croacia" title="Anexo:Gobernantes de Croacia">Croacia</a> desde 1458 hasta su muerte. Después de realizar varias campañas militares, fue elegido <a href="/wiki/Anexo:Reyes_de_Bohemia" title="Anexo:Reyes de Bohemia">rey de Bohemia</a> en 1469 y adoptó el título de <a href="/wiki/Anexo:Soberanos_de_Austria" title="Anexo:Soberanos de Austria">duque de Austria</a> en 1487.</p>
+	<p>Su padre fue <a href="/wiki/Juan_Hunyadi" title="Juan Hunyadi">Juan Hunyadi</a>, regente de Hungría hasta su fallecimiento en 1456. En 1457, el rey <a href="/wiki/Ladislao_el_P%C3%B3stumo" title="Ladislao el Póstumo">Ladislao V «el Póstumo»</a> ordenó el encarcelamiento de Matías y su hermano mayor, <a href="/wiki/Ladislao_Hunyadi" title="Ladislao Hunyadi">Ladislao Hunyadi</a>; este último fue decapitado ese mismo año, lo que provocó una rebelión que obligó al rey Ladislao V a huir del país con Matías como rehén. Después de la muerte repentina de Ladislao V, el tío de Matías, <a href="/wiki/Miguel_Szil%C3%A1gyi" title="Miguel Szilágyi">Miguel Szilágyi</a>, persuadió a los <a href="/wiki/Estamento" title="Estamento">estamentos</a> para que proclamasen unánimemente rey a Matías el 24 de enero de 1458. Matías regresó a Hungría y su gobierno comenzó bajo la tutela de su tío, pero tomó el control efectivo dos semanas después.</p>
+	<p>En su reinado, libró guerras contra los <a href="/wiki/Mercenario" title="Mercenario">mercenarios</a> checos que dominaban la <a href="/wiki/Alta_Hungr%C3%ADa" title="Alta Hungría">Alta Hungría</a> (hoy repartida entre <a href="/wiki/Eslovaquia" title="Eslovaquia">Eslovaquia</a> y el <a href="/wiki/Hungr%C3%ADa_Septentrional" title="Hungría Septentrional">norte de Hungría</a>) y contra <a href="/wiki/Federico_III_de_Habsburgo" title="Federico III de Habsburgo">Federico III</a>, emperador del <a href="/wiki/Sacro_Imperio_Romano_Germ%C3%A1nico" title="Sacro Imperio Romano Germánico">Sacro Imperio Romano Germánico</a>, que reclamó el territorio húngaro. En este período, el <a href="/wiki/Imperio_otomano" title="Imperio otomano">Imperio otomano</a> conquistó <a href="/wiki/Serbia" title="Serbia">Serbia</a> y <a href="/wiki/Bosnia_(regi%C3%B3n)" title="Bosnia (región)">Bosnia</a> y acabó con la zona de <a href="/wiki/Estado_colch%C3%B3n" title="Estado colchón">Estados tapón</a> a lo largo de las fronteras meridionales del <a href="/wiki/Reino_de_Hungr%C3%ADa" title="Reino de Hungría">Reino de Hungría</a>. Matías firmó un tratado de paz con Federico III en 1463 y reconoció el derecho del emperador a usar el título de rey de Hungría. El emperador devolvió la <a href="/wiki/Corona_de_san_Esteban" title="Corona de san Esteban">corona de san Esteban</a> y Matías fue coronado con ella el 29 de abril de 1464. En este año, invadió los territorios que habían sido ocupados recientemente por los otomanos y se apoderó de fortalezas bosnias. Pronto se dio cuenta de que no podía esperar ayuda de las potencias cristianas y renunció a su política antiotomana.</p>
+</body>
+</html>

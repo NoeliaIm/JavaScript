@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 12</title>
+	<meta name="description" content="Eliminar el segundo párrafo">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function eliminarParr() {
+			var parrafos=document.getElementById('parrafos');
+			parrafos.removeChild(parrafos.childNodes[3]);
+		}
+	</script>
+
+</head>
+<body>
+	<div id="parrafos">
+	<p>Página dinámica mediante DOM</p>
+	<p>Método removeChild</p>
+	</div>
+	<input type="button" id="eliminar" name="eliminar" value="Eliminar párrafo" onclick="eliminarParr()">
+</body>
+</html>

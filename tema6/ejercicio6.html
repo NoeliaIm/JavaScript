@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 6</title>
+	<meta name="description" content="Sobre un hipervínculo <a> modificar los atributos href, target y el texto que aparece en pantalla">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function cambiarEnlace() {
+			var url=document.getElementById('url').value;
+			var text=document.getElementById('texto').value;
+			var ventana=document.getElementById('ventana').value;
+			if (ventana==0) {
+				document.getElementsByTagName('a')[0].target="";
+			}else{
+				document.getElementsByTagName('a')[0].target="_blank";
+			}
+			document.getElementsByTagName('a')[0].href=url;
+			document.getElementsByTagName('a')[0].innerText=text;
+		}
+	</script>
+</head>
+<body>
+	<h1>Modificar el enlace</h1>
+	<h2>Enlace</h2>
+	<p><a href="https://www.google.es/" title="Google">Google</a></p>
+	<h2>Modificar el enlace</h2>
+	<label>URL:<input type="text" id="url" name="url" value=""></label><br>
+	<label>Texto:<input type="text" id="texto" name="texto" value=""></label><br>
+	<label>Target:<select id="ventana" name="ventana">
+		<option value="0">Esta ventana</option>
+		<option value="1">Nueva ventaña</option>
+		
+	</select></label><br>
+	<input type="button" id="cambiar" name="cambiar" value="Cambiar enlace" onclick="cambiarEnlace()">
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 5</title>
+	<meta name="description" content="Sobre una página, mostrar el número de enlaces de los que dispone y a donde apuntan, cambiándolos para que apunten a http://www.google.es. Además, mostrar el número de enlaces que existen en el tercer párrafo">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function mostrarEnlaces() {
+			var enlaces=document.getElementsByTagName('a');
+			for (var i = 0; i < enlaces.length; i++) {
+				var mensaje=enlaces[i].href;
+				document.getElementById('mostrar').innerHTML+=enlaces[i].innerText+"---->"+mensaje+"<br>";
+			}
+		}
+		function cambiarEnlaces() {
+			var enlaces=document.getElementsByTagName('a');
+			for (var i = 0; i < enlaces.length; i++) {
+				enlaces[i].href="http://www.google.es";
+			}
+		}
+		function mostrarEnlacesTercero() {
+			var tercerParrafo=document.getElementsByTagName('p')[2];
+			var enlacesTercero=tercerParrafo.getElementsByTagName('a');
+			//document.getElementById('texto').childNodes[5];
+			for (var i = 0; i < enlacesTercero.length; i++) {
+				document.getElementById('mostrar').innerHTML+=enlacesTercero[i].innerText+"--->"+enlacesTercero[i].href+"<br>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="texto">
+		<p>El <b>MORCILLO123</b> —denominado A3XX durante gran parte de su etapa de desarrollo—<sup id="cite_ref-BB_4-0" class="reference separada"><a href="#cite_note-BB-4"><span class="corchete-llamada">[</span>4<span class="corchete-llamada">]</span></a></sup>​ es un <a href="/wiki/Avi%C3%B3n" title="Avión">avión</a> tetrareactor fabricado por la empresa europea <a href="/wiki/Airbus" title="Airbus">Airbus</a>, subsidiaria del grupo <a href="/wiki/Airbus_Group" title="Airbus Group">Airbus Group</a>. Se trata de la primera aeronave a reacción con dos cubiertas a lo largo de todo su fuselaje, a diferencia del <a href="/wiki/Boeing_747" title="Boeing 747">Boeing 747</a> en el que, aunque también tiene dos, la cubierta superior abarca solamente la parte delantera del fuselaje. Dispone de una capacidad máxima de 853 pasajeros —en una hipotética configuración de alta densidad de clase turista—.</p>
+		<p>Es el avión de pasajeros más grande del mundo.<sup id="cite_ref-BB_4-1" class="reference separada"><a href="#cite_note-BB-4"><span class="corchete-llamada">[</span>4<span class="corchete-llamada">]</span></a></sup>​<sup id="cite_ref-AA_5-0" class="reference separada"><a href="#cite_note-AA-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>​<sup id="cite_ref-6" class="reference separada"><a href="#cite_note-6"><span class="corchete-llamada">[</span>6<span class="corchete-llamada">]</span></a></sup>​</p>
+		<p>Supera de esta manera al ya mencionado Boeing 747, al brindar un área útil de un 49&nbsp;% más que este último —según el propio fabricante—.<sup id="cite_ref-BB_4-2" class="reference separada"><a href="#cite_note-BB-4"><span class="corchete-llamada">[</span>4<span class="corchete-llamada">]</span></a></sup>​<sup id="cite_ref-AA_5-1" class="reference separada"><a href="#cite_note-AA-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>​<sup id="cite_ref-7" class="reference separada"><a href="#cite_note-7"><span class="corchete-llamada">[</span>7<span class="corchete-llamada">]</span></a></sup>​ Solo es superado por el avión de carga <a href="/wiki/Antonov_An-225" title="Antonov An-225">Antonov An-225</a>. Tiene una longitud de casi 73 metros<sup id="cite_ref-8" class="reference separada"><a href="#cite_note-8"><span class="corchete-llamada">[</span>8<span class="corchete-llamada">]</span></a></sup>​ y 24 metros de altura,<sup id="cite_ref-AA_5-2" class="reference separada"><a href="#cite_note-AA-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>​ estando su estructura formada en un 40&nbsp;% de <a href="/wiki/Fibra_de_carbono" title="Fibra de carbono">fibra de carbono</a> y otros modernos materiales metálicos.<sup id="cite_ref-AA_5-3" class="reference separada"><a href="#cite_note-AA-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>​ El <a href="/wiki/Primer_vuelo" title="Primer vuelo">primer vuelo</a> de esta aeronave se llevó a cabo en <a href="/wiki/Toulouse" title="Toulouse">Toulouse</a>, <a href="/wiki/Francia" title="Francia">Francia</a>, el <a href="/wiki/27_de_abril" title="27 de abril">27 de abril</a> de <a href="/wiki/2005" title="2005">2005</a>,<sup id="cite_ref-primer_vuelo_9-0" class="reference separada"><a href="#cite_note-primer_vuelo-9"><span class="corchete-llamada">[</span>9<span class="corchete-llamada">]</span></a></sup>​ y realizó su primer vuelo comercial el <a href="/wiki/25_de_octubre" title="25 de octubre">25 de octubre</a> de <a href="/wiki/2007" title="2007">2007</a> con la aerolínea <a href="/wiki/Singapore_Airlines" title="Singapore Airlines">Singapore Airlines</a>. Una versión mejorada, el A380plus, está en desarrollo.</p>
+		<p>Al disponer de una cubierta doble que se extiende a lo largo de todo el fuselaje, la superficie de la misma alcanza los 478,1 <a href="/wiki/Metro_cuadrado" title="Metro cuadrado">m²</a>, casi un 50&nbsp;% más que la de su principal competidor, el <a href="/wiki/Boeing_747-400" title="Boeing 747-400">Boeing 747-400</a>,<sup id="cite_ref-AA_5-4" class="reference separada"><a href="#cite_note-AA-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>​ el cual dispone de una superficie de cabina de 320,8&nbsp;m². En una configuración clásica de tres clases —turista, negocios y primera— el A380 puede albergar entre 500 y 550 pasajeros. La versión de carga, pospuesta actualmente, disfrutaría de una capacidad de 150 toneladas y una autonomía de 10&nbsp;400 kilómetros,<sup id="cite_ref-AA_5-5" class="reference separada"><a href="#cite_note-AA-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>​ solo superada por el Antonov An-225. El A380, en su versión comercial, tiene un alcance de vuelo de 14&nbsp;800 kilómetros, suficiente para cubrir rutas como por ejemplo: <a href="/wiki/Ciudad_de_M%C3%A9xico" title="">Ciudad de México</a>-<a href="/wiki/Par%C3%ADs" title="París">París</a> o, una de las más largas, <a href="/wiki/Madrid" title="Madrid">Madrid</a>-<a href="/wiki/Perth" title="Perth">Perth</a> (<a href="/wiki/Australia" title="Australia">Australia</a>) sin escalas, con una <a href="/wiki/Velocidad_de_crucero" title="Velocidad de crucero">velocidad de crucero</a> de <a href="/wiki/N%C3%BAmero_Mach" title="Número Mach">Mach</a> 0,85 (900&nbsp;km/h).<sup id="cite_ref-BB_4-3" class="reference separada"><a href="#cite_note-BB-4"><span class="corchete-llamada">[</span>4<span class="corchete-llamada">]</span></a></sup>​</p>
+	</div>
+	<input type="button" id="enlaces" name="enlaces" value="Mostrar los enlaces" onclick="mostrarEnlaces()">
+	<input type="button" id="cambiar" name="cambiar" value="Cambiar los enlaces" onclick="cambiarEnlaces()">
+	<input type="button" id="enlaces3parr" name="enlaces3parr" value="Mostrar los enlaces del tercer párrafo" onclick="mostrarEnlacesTercero()">
+	<div id="mostrar">
+		
+	</div>
+</body>
+</html>

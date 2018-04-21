@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 11</title>
+	<meta name="description" content="Pedir una dirección de correo electrónico, cambiando mediante expresiones regulares, el servidor de la cuenta: de Hotmail.com a Gmail.com">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function cambiarCorreo() {
+			var correoHot=document.getElementById('hotmail').value;
+		var reemplazo=correoHot.replace(/hotmail.com/i, "gmail.com");
+		document.getElementById('gmail').value=reemplazo;
+
+		}
+		
+	</script>
+
+</head>
+<body>
+	<label>Escriba un correo de hotmail<br><input type="text" id="hotmail" name="hotmail" value=""></label><br>
+	<input type="button" id="cambiar" name="cambiar" value="Filtrar" onclick="cambiarCorreo()">
+	<br>
+	<label>Resultado del filtro <br><input type="text" id="gmail" name="gmail" value=""></label>
+</body>
+</html>
