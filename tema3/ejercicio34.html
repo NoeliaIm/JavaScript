@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 34</title>
+	<meta name="description" content="Calcular el sumatorio de dichos números impares y mostrar el resultado">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var impares,suma=0;
+		function imparesD1a21() {
+			impares=[];
+			for (var i = 1; i <=21; i+=2) {
+				impares.push(i);
+				document.write(i+" ");
+			}
+		}
+		function sumaImpares() {
+			for (var i = 0; i < impares.length; i++) {
+				suma=suma+impares[i];
+			}
+			document.write("<br>La suma de esos números es "+suma);
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		imparesD1a21();
+		sumaImpares();
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 32</title>
+	<meta name="description" content="Crea un array multidimensional de alumnos, que incluya: Nombre, Edad, Población y H/M. ¿Se pueden usar los métodos push y pop con el array multidimensional? ¿Y con los subarrays?
+
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var alumno1=new Array("Pedro","27","Avilés", "H");
+		var alumno2= new Array("Berta", "27", "Avilés", "M");
+		var alumnos=new Array(alumno1, alumno2);
+
+		function probarMultidimensional() {
+			alumnos.push("alumno3");
+			document.write(alumnos+"<br>");
+			alumnos.pop();
+			document.write(alumnos+"<br>");
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("El array alumnos es: "+alumnos+"<br>");
+		probarMultidimensional();
+		if (alumnos=="alumno1,alumno2,alumno3") {
+			document.write("<br>Se puede usar push y pop en un array multidimensional");
+		} else {
+			document.write("<br>No se puede usar ")
+		}
+	</script>
+</body>
+</html>

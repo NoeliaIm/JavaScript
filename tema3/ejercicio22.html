@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 22</title>
+	<meta name="description" content="Permitir al usuario introducir una cadena, evaluándola con la función isNaN y devolviendo un resultado que indique si la cadena es numérica o no.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function esNumero() {
+			var cadena=prompt("Escribe lo que quieras");
+			if (isNaN(cadena)==false) {
+				document.write("Has escrito una cadena numérica");
+			} else {
+				document.write("No has escrito una cadena numérica");
+			}
+		}
+	</script>
+</head>
+<body onload="esNumero()">
+	
+</body>
+</html>

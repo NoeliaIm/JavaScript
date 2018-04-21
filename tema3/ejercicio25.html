@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 25</title>
+	<meta name="description" content="Realiza una aplicación que pida al usuario el precio de un producto sin el IVA y el IVA a aplicar, calculando el precio total a pagar.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function precioTotal() {
+			var precio=parseFloat(prompt("Dime el precio base del producto"));
+			var iva=parseFloat(prompt("Dime el tipo de IVA que le tenemos que aplicar"));
+			var total=precio+((precio*iva)/100);
+			document.write("Precio: "+precio+"<br>");
+			document.write("Iva: "+iva+"%"+"-->  "+(precio*iva)/100+"<br>");
+			document.write("Precio Total: "+total);
+		}
+	</script>
+</head>
+<body onload="precioTotal()">
+	
+</body>
+</html>

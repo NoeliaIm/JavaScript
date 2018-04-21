@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 13</title>
+	<meta name="description" content="Realiza un ejercicio trabajando con el objeto Math (y sus funciones), que muestre por pantalla el área del círculo, cuyo radio introduzca el usuario.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function areaCirculo() {
+			var radio=parseInt(prompt("Escribe el radio del círculo"));
+			var area=parseFloat(Math.PI*Math.pow(radio,2)).toFixed(2);
+			document.write("El área del círculo es "+area);
+		}
+	</script>
+</head>
+<body onload="areaCirculo()">
+	
+</body>
+</html>

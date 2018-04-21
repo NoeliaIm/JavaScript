@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 7</title>
+	<meta name="description" content="Hacer un programa que permita introducir un carácter y mediante una función compruebe si es un carácter alfabético. Realizar depuración de dato, para garantizar que se introduce una letra, visualizando un mensaje de alerta en caso contrario.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function comprobarCaracter() {
+			var caracter=prompt("Escribe un carácter");
+			var patronLetras=/^[a-zA-ZñÑ\s]/;
+			var buscarEnCadena=patronLetras.test(caracter);
+			if (buscarEnCadena==false) {
+				alert("Introduce un carácter alfabético");
+				return comprobarCaracter();
+				}
+				else{
+					document.write("Has introducido un carácter válido");
+				}
+			}
+			
+		
+	</script>
+</head>
+<body>
+	<script type="text/javascript">comprobarCaracter();</script>
+	
+</body>
+</html>

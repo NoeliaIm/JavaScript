@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 20</title>
+	<meta name="description" content="Realizar un ejercicio en el que el usuario pueda introducir cualquier palabra (con acentos, ñ,…) y nos devuelva la cadena con los caracteres especiales que correspondan a esos caracteres.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function caracteresExtranios() {
+			var cadena=prompt("Escribe una cadena de texto");
+			var patron=/[a-zA-z0-9\s]/;
+			var letras=cadena.split("");
+			var compruebo=patron.test(letras);
+			console.log(letras);
+			console.log(compruebo);
+			var especiales=0;
+			
+				
+				
+				for (var i = 0; i < letras.length; i++) {
+					if (patron.test(letras[i])==false) {
+						document.write(letras[i]);
+						especiales+=1;
+
+					}		
+				
+			}
+		
+			if (especiales===0) {
+				document.write("No hay caracteres especiales");
+			}
+	}
+	</script>
+</head>
+<body onload="caracteresExtranios()">
+	
+</body>
+</html>

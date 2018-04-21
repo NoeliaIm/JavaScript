@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 2</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Hacer un programa mediante una función que verifique si un número es múltiplo de 3. Que el script se pueda repetir si el usuario quiere">
+	<script type="text/javascript">
+		function multiploD3() {
+			var num;
+			num=parseInt(prompt("Escribe un número"));
+			if (num%3==0) {
+				alert("El número es múltiplo de 3");
+			}
+			else{
+				alert("El número no es múltiplo de 3");
+			}
+			var continuar=confirm("Quiere repetir?");
+			if (continuar == true) {
+    		multiploD3();
+		} else {
+    document.write("Para volver a comprobar si un número es múltiplo de 3 tienes que volver a iniciar la página. Recarga o pulsa F5");
+	}
+}
+
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	multiploD3();
+</script>
+</body>
+</html>

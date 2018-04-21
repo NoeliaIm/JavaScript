@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 12</title>
+	<meta name="description" content="Realiza un ejercicio mediante funciones y trabajando con el objeto Date, que muestre por pantalla:
+La fecha actual
+La fecha del fin del mundo maya (21/11/2012)
+El número de días o el número de segundos que han pasado de esa fecha.
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function fecha() {
+			var fechaHoy= new Date();
+			var finMaya= new Date(2010,11,21);
+			var hastaHoy= fechaHoy - finMaya;
+			document.write("Hoy es "+fechaHoy.toLocaleString()+"<br>");
+			document.write("El fin de mundo Maya ha sido "+finMaya.toLocaleString()+"<br>");
+			document.write("Han pasado "+ hastaHoy*1.1574E-8 +" días");
+		}
+	</script>
+</head>
+<body onload="fecha()">
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 15</title>
+	<meta name="description" content="Haz un programa que nos pida un número en base 8 y nos de cómo resultado el número en base decimal y en base 2.">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function pasarBases() {
+			var numB8, numB10, numB2;
+			numB8=prompt("Escribe un número en base 8");
+			numB10=parseInt(numB8, 8);
+			numB2=numB10.toString(2);
+			document.write("El número "+numB8+ " es "+numB10+ " en Base 10 y "+numB2+ " en Base 2");
+
+		}
+	</script>
+</head>
+<body onload="pasarBases()">
+	
+</body>
+</html>

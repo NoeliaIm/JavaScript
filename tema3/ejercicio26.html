@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 26</title>
+	<meta name="description" content="Realiza dos funciones, en la primera deberás pedir al usuario el resultado de una división. En la segunda comprobarás si el resultado es correcto o no, devolviendo esa información a la primera función.
+
+Mediante var aleatorio = Math.random() conseguimos un numero aleatorio entre 0 y 1. Mediante la siguiente función conseguiremos un número aleatorio entre dos valores dados.
+
+function aleatorio(inferior, superior)
+{ 
+    numPosibilidades = superior - inferior 
+    aleat = Math.random() * numPosibilidades 
+    aleat = Math.round(aleat) 
+    return parseInt(inferior) + aleat 
+}
+
+Modifica el ejercicio anterior para que la división propuesta por la primera función sea aleatoria.
+">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function division() {
+			var resultado=parseInt(prompt("Escribe el resultado de 524/8"));
+			comprobarDivision(resultado);
+		}
+		function comprobarDivision(resultado) {
+			var solucion=65;
+			if (resultado==solucion) {
+				document.write("Correcto");
+			} else {
+				document.write("Incorrecto");
+			}
+
+		}
+	</script>
+</head>
+<body onload="division()">
+	
+</body>
+</html>

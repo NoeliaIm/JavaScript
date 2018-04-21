@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Ejemplo de JavaScript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function calcula(obj) {
+			obj.result.value=eval(obj.expr.value)
+		}
+	</script>
+	<form name="evalua">
+		Introducir expresión:
+		<input type="text" name="expr" size="20">
+		<br>
+		Resultado:
+		<input type="text" name="result" size="20">
+		<br>
+		<input type="button" name="evalua" onclick="calcula(this.form)">
+	</form>
+	
+</body>
+</html>

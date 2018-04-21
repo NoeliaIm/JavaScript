@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 8</title>
+	<meta name="description" content="Hacer un programa que permita introducir dos caracteres, con depuración de datos de entrada, y con una función permita comprobar cual es el mayor de ellos">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		function elMayor() {
+			var caract1, caract2;
+			caract1=prompt("Escribe un carácter");
+			caract2=prompt("Escribe otro carácter");
+			var valido=/[a-zA-ZñÑ0-9]/;
+			var meSirve1=valido.test(caract1);
+			var meSirve2=valido.test(caract2);
+			if (meSirve1==false || meSirve2==false) {
+				alert("No has escrito caracteres válidos");
+				elMayor();
+			} else {
+				comprueba(caract1,caract2);
+			}
+		}
+			function comprueba(caract1,caract2) {
+				
+				if (caract1>caract2) {
+					document.write(caract1+" es mayor que "+caract2);
+				} else {
+					document.write(caract2+" es mayor que "+caract1);
+				}
+			}
+		
+	</script>
+</head>
+<body onload="elMayor()">
+	
+</body>
+</html>

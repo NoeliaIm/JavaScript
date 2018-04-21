@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 11</title>
+	<meta name="description" content="Hacer un programa que mediante una función e introducidos previamente dos números y un operador, realice el cálculo">
+	<link rel="stylesheet" href="">
+	<script type="text/javascript">
+		var num1, num2, operador;
+		num1=parseInt(prompt("Escribe un número"));
+		num2=parseInt(prompt("Escribe un número"));
+		operador=prompt("Escribe el operador para realizar el cálculo");
+		function calculo() {
+			var resultado=eval(num1+operador+num2);
+			document.write(resultado);
+		}
+	</script>
+</head>
+<body onload="calculo()">
+	
+</body>
+</html>
